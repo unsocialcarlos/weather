@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px;
+        }
+        .weather-info {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #fff;
+        }
+        .weather-icon {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aplicación del Clima</h1>
+    <h2 id="city-name">Cargando...</h2>
+    <img id="weather-icon" class="weather-icon" src="" alt="Icono del clima">
+    <div class="weather-info">
+        <p id="temperature">Temperatura: Cargando...</p>
+        <p id="description">Descripción: Cargando...</p>
+        <p id="wind">Viento: Cargando...</p>
+        <p id="pressure">Presión: Cargando...</p>
+    </div>
+    <select id="city-select">
+        <option value="London">Londres</option>
+        <option value="Paris">París</option>
+        <option value="New York">Nueva York</option>
+        <option value="Tokyo">Tokio</option>
+        <option value="Madrid">Madrid</option>
+    </select>
+    <button id="get-weather">Obtener Clima</button>
+
+    <script src="app.js"></script>
+</body>
+</html>
