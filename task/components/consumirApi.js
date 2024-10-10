@@ -1,20 +1,33 @@
-const aplicacion = document.querySelector('.container');
 
-const url = 'https://jsonplaceholder.typicode.com/users';
+const apiKey = '5c6fb6b369b7d6308488bbe35bcdb71e';
+const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
-fetch(url)
-    .then(res => res.json()).then(data => {
-        data.forEach(usuario => {
+const locationInput = document.getElementById('locationInput');
+const searchButton = document.getElementById('searchButton');
+const locationElement = document.getElementById('location');
+const temperatureElement = document.getElementById('temperature');
+const descriptionElement = document.getElementById('description');
 
-            const p = document.createElement('p')
-            p.setAttribute('id', usuario.id)
-            p.innerHTML = usuario.name
-            p.addEventListener('click', function(){
-                window.location.href =`./usuario.html?id=${usuario.id}`
+searchButton.addEventListener('click', () => {
+    const location = locationInput.value;
+    if (location) {
+        fetchWeather(location);
+    }
+});
+
+function fetchWeather(location) {
+    const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            locationElement.textContent = data.name;
+            temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
+            descriptionElement.textContent = data.weather[0].description;
         })
-            
-            aplicacion.appendChild(p)
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
         });
+}
 
-    })
-    .catch(err => console.log(err));
+
