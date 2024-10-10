@@ -1,4 +1,3 @@
-
 const apiKey = '5c6fb6b369b7d6308488bbe35bcdb71e';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
@@ -14,9 +13,17 @@ searchButton.addEventListener('click', () => {
         fetchWeather(location);
     }
 });
+locationInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        const location = locationInput.value;
+        if (location) {
+            fetchWeather(location);
+        }
+    }
+});
 
 function fetchWeather(location) {
-    const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric`;
+    const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric&lang=es`;
 
     fetch(url)
         .then(response => response.json())
@@ -28,6 +35,7 @@ function fetchWeather(location) {
         .catch(error => {
             console.error('Error fetching weather data:', error);
         });
+        
 }
 
 
