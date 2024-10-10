@@ -26,16 +26,30 @@ function fetchWeather(location) {
     const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric&lang=es`;
 
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            // Verifica si la respuesta es exitosa (status en el rango 200-299)
+            if (!response.ok) {
+                if (response.status === 404) {
+                    throw new Error('Error(404).');
+                } else {
+                    throw new Error(`Error: ${response.status} ${response.statusText}`);
+                }
+            }
+            return response.json(); // Si es exitosa, convertir a JSON
+        })
         .then(data => {
+            // Actualiza el contenido del DOM con los datos obtenidos
             locationElement.textContent = data.name;
             temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
             descriptionElement.textContent = data.weather[0].description;
         })
         .catch(error => {
+            // Manejo del error, incluido el 404
             console.error('Error fetching weather data:', error);
+            locationElement.textContent = 'Ubicación no encontrada';
+            temperatureElement.textContent = '';
+            descriptionElement.textContent = error.message; // Mostrar mensaje de error en la página
         });
-        
 }
 
 

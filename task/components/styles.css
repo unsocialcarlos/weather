@@ -1,5 +1,6 @@
 body {
   font-family: Arial, sans-serif;
+  font-size: 22px;
     /* background-color: #f0f0f0; */
 
   background-image: url('espacio.jpg');
@@ -15,11 +16,11 @@ body {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   background-color: rgba(255, 255, 255, 0.5); /* Set the background color to be transparent */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the alpha value here for the box shadow transparency */
-  margin-top: 250px;
+  margin-top: 200px;
 }
 
 h1 {
@@ -27,11 +28,12 @@ h1 {
 }
 
 input[type="text"] {
-  width: 100%;
+  width:auto;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  font-size: 18px;
 }
 
 button {
@@ -44,5 +46,5 @@ button {
 }
 
 .weather-info {
-  margin-top: 20px;
+  margin-top: 60px;
 }
