@@ -54,7 +54,7 @@ function fetchWeather(location) {
             locationElement.textContent = 'Ubicación no encontrada.';
             temperatureElement.textContent = '';
             descriptionElement.textContent = error.message;
-            iconElement.src = '';
+            iconElement.src = ('100px.png');
             iconElement.alt = '';
         });
 }
