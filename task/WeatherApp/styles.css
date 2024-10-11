@@ -1,7 +1,7 @@
 @keyframes BgAnimation {
   0% {background-image:url('espacio.jpg');}
-  30% {background-image:url('nubes.jpg');}
-  60% {background-image:url('soleado.jpg');}
+  30% {background-image:url('soleado.jpg');}
+  60% {background-image:url('nubes.jpg');}
   100% {background-image:url('tormenta.jpg');}
 }
 
