@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unit 3</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Unit 3: GET, POST & JS. Fetch</h1>
+        <p class="text-red">Para obtener el token usar este endpoint:
+            https://clouddemosjncv14.audidata.es:5555/api/login POST - Usuario:jnc - Password: passjnc. Basic Method
+        </p>
+
+        <section>
+            <h4>Task 1</h4>
+            <p>Al pulsar el boton .b-1, la función f1. Envía una petición con FETCH a
+                https://clouddemosjncv14.audidata.es:5555 con siguiente características:</p>
+            <ul>
+                <li>url: /maestro/articulos</li>
+                <li>method: <span class="badge text-bg-success">GET</span></li>
+            </ul>
+            <p>En out-1 mostrar la descripción (descart) separados por un espacio</p>
+
+            <button id="fetchButton">Obtener datos</button>
+            <div id="out-1"></div>
+        </section>
+
+        <section>
+            <h4>Task 2</h4>
+            <p>Al pulsar el boton .b-2, la función f2. Envía una petición con FETCH a
+                https://clouddemosjncv14.audidata.es:5555 con siguiente características:</p>
+            <ul>
+                <li>url: /maestro/clientes</li>
+                <li>method: <span class="badge text-bg-success">GET</span></li>
+            </ul>
+            <p>En out-2 mostrar una tabla con todos los nombres (nomcli) y nif (nifcli)</p>
+
+            <button class="button-primary-b-2">Task-2</button>
+            <div class="out-2"></div>
+        </section>
+
+
+        <p class="text-orange">Jnc Dev - Author: Ruslan N. & Jose R.</p>
+    </div>
+    <script src="config.js"></script>
+    <script src="unit_3.js"></script>
+</body>
+
+</html>
