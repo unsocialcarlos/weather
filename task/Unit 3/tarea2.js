@@ -1,5 +1,6 @@
 // T A R E A - 2
 
+
 document.addEventListener('DOMContentLoaded', function () {
     // Función que hace la solicitud fetch
     async function showName() {
@@ -20,10 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Convertimos la respuesta a JSON
             const datos = await respuesta.json();
 
-            // 1. Mostrar todos los 'descart' en out-1 separados por comas
-            const descripciones = datos.map(cliente => cliente.descart || 'Sin descripción').join(', ');
-            document.getElementById('out-1').textContent = descripciones; // Cambié a 'out-1' según tu requerimiento
-
             // 2. Crear una tabla con 'nomcli' y 'nifcli' en out-2
             let tablaHTML = '<table border="1"><tr><th>Nombre</th><th>NIF</th></tr>';
 
@@ -42,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } catch (error) {
             // Mostramos el error en caso de que haya algún problema
             console.error('Error en el fetch:', error);
-            document.getElementById('out-1').textContent = 'Ocurrió un error: ' + error.message; // Cambié a 'out-1' para el error
+            document.querySelector('.out-2').textContent = 'Ocurrió un error: ' + error.message; // Cambié a 'out-2' para el error
         }
     }
 
