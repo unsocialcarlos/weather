@@ -1,6 +1,3 @@
-// T A R E A - 2
-
-
 document.addEventListener('DOMContentLoaded', function () {
     // Función que hace la solicitud fetch
     async function showName() {

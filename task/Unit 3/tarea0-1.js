@@ -20,7 +20,7 @@ fetch('https://clouddemosjncv14.audidata.es:5555/api/login', {
         return response.json(); // Procesa la respuesta como JSON
     })
     .then(data => {
-        console.log('Token obtenido:', data.token); // Maneja el token aquí
+        //console.log('Token obtenido:', data.token); // Maneja el token aquí
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
@@ -56,7 +56,7 @@ async function obtenerDatos() {
 
         // Mostramos los datos en el div
         document.getElementById('out-1').textContent = descripciones;
-    
+
     } catch (error) {
         // Mostramos el error en caso de que haya algún problema
         console.error('Error en el fetch:', error);
