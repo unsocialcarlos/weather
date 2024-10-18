@@ -12,136 +12,471 @@
 
 <body>
     <div class="container">
-        <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Unidad 3: GET, POST y JS. Obtener</font></font></h1>
-        <p class="text-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Para obtener el token usar este endpoint: https://clouddemosjncv14.audidata.es:5555/api/login </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">POST - Usuario:"jnc" - Contraseña: "passjnc". Método básico</font></font></p>
-        <p><a href="https://a3erpapi.appcloud.es/"><b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Documentación API A3 ERP</font></font></b></a></p>
+        <h1>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Unidad 3: GET, POST y JS. Obtener</font>
+            </font>
+        </h1>
+        <p class="text-red">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Para obtener el token usar este endpoint:
+                    https://clouddemosjncv14.audidata.es:5555/api/login </font>
+            </font><br>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">POST - Usuario:"jnc" - Contraseña: "passjnc". Método básico
+                </font>
+            </font>
+        </p>
+        <p><a href="https://a3erpapi.appcloud.es/"><b>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Documentación API A3 ERP</font>
+                    </font>
+                </b></a></p>
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 1</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón .b-1, la función f1. Envía una petición con FETCH a https://clouddemosjncv14.audidata.es:5555 con las siguientes características:</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 1</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón .b-1, la función f1. Envía una petición
+                        con FETCH a https://clouddemosjncv14.audidata.es:5555 con las siguientes características:</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">url: /maestro/articulos</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">método: </font></font><span class="badge text-bg-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OBTENER</font></font></span></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">url: /maestro/articulos</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">método: </font>
+                    </font><span class="badge text-bg-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">OBTENER</font>
+                        </font>
+                    </span>
+                </li>
             </ul>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-1 mostrar la descripción (descartar) separados con coma</font></font></p>
-    
-            <button id="fetchButton"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 1</font></font></button>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-1 mostrar la descripción (descartar) separados con
+                        coma</font>
+                </font>
+            </p>
+
+            <button id="fetchButton">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 1</font>
+                </font>
+            </button>
             <div id="out-1"></div>
         </section>
 
+
+        
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 2</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón .b-2, la función f2. Envía una petición con FETCH a https://clouddemosjncv14.audidata.es:5555 con las siguientes características:</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 2</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón .b-2, la función f2. Envía una petición
+                        con FETCH a https://clouddemosjncv14.audidata.es:5555 con las siguientes características:</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">url: /maestro/clientes</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">método: </font></font><span class="badge text-bg-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OBTENER</font></font></span></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">url: /maestro/clientes</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">método: </font>
+                    </font><span class="badge text-bg-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">OBTENER</font>
+                        </font>
+                    </span>
+                </li>
             </ul>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-2 mostrar una tabla con todos los nombres (nomcli) y nif (nifcli)</font></font></p>
-    
-            <button class="fetchButton2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 2</font></font></button>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-2 mostrar una tabla con todos los nombres (nomcli) y
+                        nif (nifcli)</font>
+                </font>
+            </p>
+
+            <button class="fetchButton2">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 2</font>
+                </font>
+            </button>
             <div class="out-2"></div>
         </section>
 
+
+
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 3</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón .b-3, se activa la función f3. Función:</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crea Promise con fetch</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Si la respuesta.ok entonces resuelve la respuesta en formato .json()</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Luego, especifique la función resolveF1, rechazarError</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 3</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón .b-3, se activa la función f3. Función:
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Crea Promise con fetch</font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Si la respuesta.ok entonces resuelve la respuesta en formato
+                        .json()</font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Luego, especifique la función resolveF1, rechazarError</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">url: /api/maestro/clientes</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">método: </font></font><span class="badge text-bg-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OBTENER</font></font></span></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">url: /api/maestro/clientes</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">método: </font>
+                    </font><span class="badge text-bg-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">OBTENER</font>
+                        </font>
+                    </span>
+                </li>
             </ul>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-3 mostrar una tabla con todos los codcli y nomcli</font></font></p>
-    
-            <button class="button-primary b-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 3</font></font></button>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-3 mostrar una tabla con todos los codcli y nomcli
+                    </font>
+                </font>
+            </p>
+
+            <button class="button-primary b-3">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 3</font>
+                </font>
+            </button>
             <div class="out-3"></div>
         </section>
 
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 4</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón .b-4, se activa la función f4. Función:</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El valor de .i-4 pasar por el fitro y devolver artículos que contienen esta palabra.</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 4</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón .b-4, se activa la función f4. Función:
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">El valor de .i-4 pasar por el fitro y devolver artículos que
+                        contienen esta palabra.</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">url: /api/maestro/articulos</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">método: </font></font><span class="badge text-bg-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OBTENER</font></font></span></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">url: /api/maestro/articulos</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">método: </font>
+                    </font><span class="badge text-bg-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">OBTENER</font>
+                        </font>
+                    </span>
+                </li>
             </ul>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-4 mostrar una tabla con todos los codar y nomcli</font></font></p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-4 mostrar una tabla con todos los codar y nomcli
+                    </font>
+                </font>
+            </p>
 
             <input type="text" class="i-4">
-            <button class="button-primary b-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 4</font></font></button>
+            <button class="button-primary b-4">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 4</font>
+                </font>
+            </button>
             <div class="out-4"></div>
         </section>
 
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 5</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón .b-5, se activa la función f5. Función:</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El valor de .i-5 pasar por el fitro de api devolver articulos que contienen esta palabra. </font></font><a href="https://a3erpapi.appcloud.es/documentacion/api-basicos/api#filtro-filtro-order-order"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fitro API A3</font></font></a></p>
-            
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 5</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón .b-5, se activa la función f5. Función:
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">El valor de .i-5 pasar por el fitro de api devolver articulos
+                        que contienen esta palabra. </font>
+                </font><a href="https://a3erpapi.appcloud.es/documentacion/api-basicos/api#filtro-filtro-order-order">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Fitro API A3</font>
+                    </font>
+                </a>
+            </p>
+
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">url: /api/maestro/articulos/filtro</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">método: </font></font><span class="badge text-bg-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OBTENER</font></font></span></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">url: /api/maestro/articulos/filtro</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">método: </font>
+                    </font><span class="badge text-bg-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">OBTENER</font>
+                        </font>
+                    </span>
+                </li>
             </ul>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-5 mostrar una tabla con todos los codart y nomcli</font></font></p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-5 mostrar una tabla con todos los codart y nomcli
+                    </font>
+                </font>
+            </p>
 
             <input type="text" class="i-5">
-            <button class="button-primary b-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 5</font></font></button>
+            <button class="button-primary b-5">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 5</font>
+                </font>
+            </button>
             <div class="out-5"></div>
         </section>
 
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 6</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón .b-6, se activa la función f6. Función:</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">El valor de .i-6 pasar por el fitro de api devolver articulos que contienen esta palabra. </font></font><a href="https://a3erpapi.appcloud.es/documentacion/api-basicos/api#filtro-filtro-order-order"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fitro API A3</font></font></a></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tenemos que sacar el precio del artículo y mostrar en una tarjeta su Nombre, Precio e identificador. Añadir botón "añadir al carito" por el momento sin acción.</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 6</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón .b-6, se activa la función f6. Función:
+                    </font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">El valor de .i-6 pasar por el fitro de api devolver articulos
+                        que contienen esta palabra. </font>
+                </font><a href="https://a3erpapi.appcloud.es/documentacion/api-basicos/api#filtro-filtro-order-order">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Fitro API A3</font>
+                    </font>
+                </a>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tenemos que sacar el precio del artículo y mostrar en una
+                        tarjeta su Nombre, Precio e identificador. Añadir botón "añadir al carito" por el momento sin
+                        acción.</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">url: /api/maestro/articulos/filtro</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">método: </font></font><span class="badge text-bg-success"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OBTENER</font></font></span></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">url: /api/maestro/articulos/filtro</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">método: </font>
+                    </font><span class="badge text-bg-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">OBTENER</font>
+                        </font>
+                    </span>
+                </li>
             </ul>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-6 mostrar el resultado</font></font></p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-6 mostrar el resultado</font>
+                </font>
+            </p>
 
             <input type="text" class="i-6">
-            <button class="button-primary b-6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 6</font></font></button>
+            <button class="button-primary b-6">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 6</font>
+                </font>
+            </button>
             <div class="out-6"></div>
         </section>
 
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 7</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Al pulsar el botón de "añadir al carito" en "Task 6" tienes que mostrar el carito en una tabla con estos datos en .out-7.</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En esta tarea, se te pide crear un carrito tipo tabla de compra. El carrito debe permitir al usuario:</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 7</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Al pulsar el botón de "añadir al carito" en "Task 6" tienes
+                        que mostrar el carito en una tabla con estos datos en .out-7.</font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En esta tarea, se te pide crear un carrito tipo tabla de
+                        compra. El carrito debe permitir al usuario:</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver el contenido del carrito: El usuario debe poder ver una lista de los artículos que ha agregado al carrito, incluyendo el título, la cantidad y el precio de cada artículo.</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Modificar la cantidad de artículos: El usuario debe poder modificar la cantidad de cada artículo en el carrito.</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Eliminar artículos del carrito: El usuario debe poder eliminar artículos del carrito.</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ver el precio total del carito.</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Botones de acción: + &amp; - para cantidad.</font></font></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Ver el contenido del carrito: El usuario debe poder ver
+                            una lista de los artículos que ha agregado al carrito, incluyendo el título, la cantidad y
+                            el precio de cada artículo.</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Modificar la cantidad de artículos: El usuario debe poder
+                            modificar la cantidad de cada artículo en el carrito.</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Eliminar artículos del carrito: El usuario debe poder
+                            eliminar artículos del carrito.</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Ver el precio total del carito.</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Botones de acción: + &amp; - para cantidad.</font>
+                    </font>
+                </li>
             </ul>
 
-            <p class="text-orange"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Importante: Los datos no se tienen que perder con cerrar el navegador.</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En out-7 mostrar el carito en una tabla</font></font></p>
+            <p class="text-orange">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Importante: Los datos no se tienen que perder con cerrar el
+                        navegador.</font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En out-7 mostrar el carito en una tabla</font>
+                </font>
+            </p>
 
-            <button class="button-primary b-7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 7</font></font></button>
+            <button class="button-primary b-7">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 7</font>
+                </font>
+            </button>
             <div class="out-7"></div>
         </section>
 
         <section>
-            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 8</font></font></h4> 
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crear un botón "Tramitar pedido" en "Task 7": Debes mostrar el botón debajo de la tabla y con un anclaje llevar a out-8 al formulario.</font></font></p>
-            <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">En esta tarea, se te pide crear un formulario para recopilar los datos necesarios para crear un pedido de venta utilizando la API de A3 Documentos/PV.</font></font></p>
+            <h4>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 8</font>
+                </font>
+            </h4>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Crear un botón "Tramitar pedido" en "Task 7": Debes mostrar
+                        el botón debajo de la tabla y con un anclaje llevar a out-8 al formulario.</font>
+                </font>
+            </p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">En esta tarea, se te pide crear un formulario para recopilar
+                        los datos necesarios para crear un pedido de venta utilizando la API de A3 Documentos/PV.</font>
+                </font>
+            </p>
             <ul>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cree el formulario con los datos necesarios. Investigue en la documentación de la API para determinar qué campos son necesarios.</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Implementar control de errores. Maneja los posibles errores que puedan ocurrir al enviar el formulario o al procesar el pedido.</font></font></li>
-                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mostrar un mensaje de éxito. Si el pedido se ha procesado correctamente, muestra un mensaje en out-8 indicando que el pedido está tramitado.</font></font></li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Cree el formulario con los datos necesarios. Investigue
+                            en la documentación de la API para determinar qué campos son necesarios.</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Implementar control de errores. Maneja los posibles
+                            errores que puedan ocurrir al enviar el formulario o al procesar el pedido.</font>
+                    </font>
+                </li>
+                <li>
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Mostrar un mensaje de éxito. Si el pedido se ha procesado
+                            correctamente, muestra un mensaje en out-8 indicando que el pedido está tramitado.</font>
+                    </font>
+                </li>
             </ul>
-            <p><a href="https://a3erpapi.appcloud.es/documentacion/api-basicos/documento"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Documentos API A3</font></font></a></p>
-            <button class="button-primary b-8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tarea 8</font></font></button>
+            <p><a href="https://a3erpapi.appcloud.es/documentacion/api-basicos/documento">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Documentos API A3</font>
+                    </font>
+                </a></p>
+            <button class="button-primary b-8">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">Tarea 8</font>
+                </font>
+            </button>
             <div class="out-8"></div>
-        </section>  
+        </section>
 
-        <p class="text-orange"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Jnc Dev - Autor: Ruslan N. &amp; Jose R. &amp; David P.</font></font></p>
+        <p class="text-orange">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">Jnc Dev - Autor: Ruslan N. &amp; Jose R. &amp; David P.</font>
+            </font>
+        </p>
     </div>
-    
+
     <script src="tarea0-1.js"></script>
     <script src="tarea2.js"></script>
+    <script src="tarea3.js"></script>
 </body>
 
 </html>
