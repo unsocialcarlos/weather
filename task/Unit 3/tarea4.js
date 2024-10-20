@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 tablaHTML += `<tr><td>${codar}</td><td>${nomcli}</td></tr>`;
             });
 
-            tablaHTML += '</table>';  // Cerramos la tabla
 
+            tablaHTML += '</table>';  // Cerramos la tabla
             // Mostramos la tabla en el div con clase 'out-4'
             document.querySelector('.out-4').innerHTML = tablaHTML;
 

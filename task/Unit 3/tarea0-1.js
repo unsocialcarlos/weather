@@ -20,14 +20,14 @@ fetch('https://clouddemosjncv14.audidata.es:5555/api/login', {
         return response.json(); // Procesa la respuesta como JSON
     })
     .then(data => {
-        //console.log('Token obtenido:', data.token); // Maneja el token aquí
+        console.log('Token obtenido:', data.token); // Maneja el token aquí
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
 
 // TOKEN
-const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3MjkyNTY5MjEsIm5iZiI6MTcyOTIzNTIzMSwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.rc2q31T6Tal5MV7LIcPPJc_9xwgq-cKDLcsg0z-edPhFGV81AEG-BouOFxfa2M36OGCpU6lA9PMZPHmliQOA-g'
+const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk0NzA4NDksIm5iZiI6MTcyOTQ0OTE1OSwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.OXZ6YUw1oSu3JuTfJ0wwBhne--uZkWOHK3e2kp0B0B1M0WMxBLyDVK4IQx06doZKoM4k9jYYwXbRNPvC-lxPBA'
 
 // T A R E A - 1
 
