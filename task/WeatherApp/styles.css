@@ -6,6 +6,7 @@
 }
 
 body {
+  
   font-family: Arial, sans-serif;
   font-size: 18px;
   /* background-color: #f0f0f0; 
@@ -30,10 +31,10 @@ body {
     255,
     255,
     255,
-    0.5
+    0.8
   ); /* Set the background color to be transparent */
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the alpha value here for the box shadow transparency */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Adjust the alpha value here for the box shadow transparency */
   margin-top: 200px;
 }
 

@@ -8,6 +8,9 @@ const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
 const iconElement = document.getElementById('weatherIcon'); // Nuevo elemento para el icono
 
+
+
+
 // Función para obtener la ubicación actual del usuario
 function getUserLocation() {
     if (navigator.geolocation) {
@@ -24,6 +27,9 @@ function getUserLocation() {
         locationElement.textContent = 'La geolocalización no está soportada en este navegador.';
     }
 }
+
+
+
 // Función para obtener el clima basado en la ciudad
 function fetchWeather(location) {
     const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric&lang=es`;
@@ -58,6 +64,9 @@ function fetchWeather(location) {
             iconElement.alt = '';
         });
 }
+
+
+
 // Obtener el clima basado en las coordenadas (latitud y longitud)
 function fetchWeatherByCoords(lat, lon) {
     const url = `${apiUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`;
@@ -94,6 +103,9 @@ function fetchWeatherByCoords(lat, lon) {
             iconElement.alt = '';
         });
 }
+
+
+
 // Evento para el botón de búsqueda
 searchButton.addEventListener('click', () => {
     const location = locationInput.value;
@@ -101,6 +113,8 @@ searchButton.addEventListener('click', () => {
         fetchWeather(location);
     }
 });
+
+
 // Evento para presionar la tecla Enter en el campo de texto
 locationInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -110,6 +124,9 @@ locationInput.addEventListener('keydown', (event) => {
         }
     }
 });
+
+
+
 // Llama a getUserLocation al cargar la página
 window.addEventListener('load', () => {
     getUserLocation();
