@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', function () {
     // Función que hace la solicitud fetch
     async function f4() {
@@ -50,4 +51,63 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Asignamos la función al evento onclick del botón con clase '.button-primary-b-4'
     document.querySelector('.button-primary-b-4').addEventListener('click', f4);
+});
+
+*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3MjkzNzQzMDMsIm5iZiI6MTcyOTM1MjYxMywicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.2644rIiygMpoEdTIry9dKATlkHWeMYHedfdY4DL-BjFqcBOwsNniq1r87E4NroF51nsfsn_Wjg6ELXExXEX36Q'
+    // Función que hace la solicitud fetch
+    async function tabla4() {
+        try {
+            // Asegúrate de que el token esté definido antes de hacer la solicitud
+            if (!token) {
+                throw new Error('Token no definido');
+            }
+
+            // Realizamos la solicitud fetch a la API
+            const respuesta = await fetch('https://clouddemosjncv14.audidata.es:5555/api/maestro/articulos', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,  // Asegúrate de tener el token correcto
+                }
+            });
+
+            // Verificamos si la respuesta fue exitosa
+            if (!respuesta.ok) {
+                throw new Error('Error en la solicitud: ' + respuesta.status);
+            }
+
+            // Convertimos la respuesta en JSON
+            const datos = await respuesta.json();
+
+            // Verificamos si los datos están en el formato correcto
+            if (!Array.isArray(datos)) {
+                throw new Error('El formato de los datos no es el esperado.');
+            }
+
+            // Creamos una tabla para mostrar 'codar' y 'nomcli'
+            let tablaHTML = '<table border="1"><tr><th>Codar</th><th>Nomcli</th></tr>';
+
+            // Iteramos sobre cada artículo para construir las filas de la tabla
+            datos.forEach(articulo => {
+                const codar = articulo.codar || 'Sin código';
+                const nomcli = articulo.nomcli || 'Sin nombre';
+                tablaHTML += `<tr><td>${codar}</td><td>${nomcli}</td></tr>`;
+            });
+
+            tablaHTML += '</table>';  // Cerramos la tabla
+
+            // Mostramos la tabla en el div con clase 'out-4'
+            document.querySelector('.out-4').innerHTML = tablaHTML;
+
+        } catch (error) {
+            // Mostramos el error en caso de que haya algún problema
+            console.error('Error en el fetch:', error);
+            document.querySelector('.out-4').textContent = 'Ocurrió un error: ' + error.message;
+        }
+    }
+
+    // Asignamos la función al evento onclick del botón con clase '.button-primary-b-4'
+    document.querySelector('.button-primary-b-4').addEventListener('click', tabla4);
 });
