@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Función que hace la solicitud fetch
-    async function f4() {
+    async function f5() {
         try {
             // Realizamos la solicitud fetch a la API
-            const respuesta = await fetch('https://clouddemosjncv14.audidata.es:5555/api/maestro/articulos', {
+            const respuesta = await fetch('https://clouddemosjncv14.audidata.es:5555/api/maestro/filtro/{descart}', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,  // Asegúrate de tener el token correcto
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const datos = await respuesta.json();
 
             // Obtenemos el valor del input
-            const inputValor = document.querySelector('.i-4').value.trim();
+            const inputValor = document.querySelector('.i-5').value.trim();
 
             // Filtramos los datos si hay un valor en el input, si no, mostramos todos los datos
             const datosFiltrados = inputValor
@@ -32,22 +32,22 @@ document.addEventListener('DOMContentLoaded', function () {
             // Iteramos sobre los artículos filtrados para construir las filas de la tabla
             datosFiltrados.forEach(articulo => {
                 const codigoArticulo = articulo.codart || 'Sin código';
-                const nombreProducto = articulo.descart || 'Sin descripción';
-                tablaHTML += `<tr><td>${codigoArticulo}</td><td>${nombreProducto}</td></tr>`;
+                const nombreArticulo = articulo.descart || 'Sin descripción';
+                tablaHTML += `<tr><td>${codigoArticulo}</td><td>${nombreArticulo}</td></tr>`;
             });
 
             tablaHTML += '</table>';  // Cerramos la tabla
 
             // Mostramos la tabla en el div con clase 'out-4'
-            document.querySelector('.out-4').innerHTML = tablaHTML;
+            document.querySelector('.out-5').innerHTML = tablaHTML;
 
         } catch (error) {
             // Mostramos el error en caso de que haya algún problema
             console.error('Error en el fetch:', error);
-            document.querySelector('.out-4').textContent = 'Ocurrió un error: ' + error.message;
+            document.querySelector('.out-5').textContent = 'Ocurrió un error: ' + error.message;
         }
     }
 
     // Asignamos la función al evento onclick del botón con clase '.button-primary-b-4'
-    document.querySelector('.button-primary-b-4').addEventListener('click', f4);
+    document.querySelector('.button-primary-b-5').addEventListener('click', f5);
 });
