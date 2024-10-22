@@ -1,17 +1,14 @@
-const apiKey = '5c6fb6b369b7d6308488bbe35bcdb71e';
-const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-
 const locationInput = document.getElementById('locationInput');
 const searchButton = document.getElementById('searchButton');
 const locationElement = document.getElementById('location');
 const temperatureElement = document.getElementById('temperature');
 const descriptionElement = document.getElementById('description');
 const iconElement = document.getElementById('weatherIcon');
+const visibilityElement = document.getElementById('visibility');
+const windElement = document.getElementById('wind');
+const pressureElement = document.getElementById('pressure');
+const rainElement = document.getElementById('rain');
 
-const visibilityElement = document.getElementById('visibility'); // Nuevo elemento para visibilidad
-const windElement = document.getElementById('wind'); // Nuevo elemento para viento
-const pressureElement = document.getElementById('pressure'); // Nuevo elemento para presión
-const rainElement = document.getElementById('rain'); // Nuevo elemento para lluvia
 
 // Función para obtener la ubicación actual del usuario
 function getUserLocation() {
@@ -19,7 +16,7 @@ function getUserLocation() {
         navigator.geolocation.getCurrentPosition((position) => {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            fetchWeatherByCoords(lat, lon); // Obtener clima usando coordenadas
+            fetchWeatherByCoords(lat, lon);
         }, (error) => {
             console.error('Error obteniendo la ubicación:', error);
             locationElement.textContent = 'No se pudo obtener la ubicación. Busque manualmente.';
@@ -32,7 +29,7 @@ function getUserLocation() {
 
 // Función para obtener el clima basado en la ciudad
 function fetchWeather(location) {
-    const url = `${apiUrl}?q=${location}&appid=${apiKey}&units=metric&lang=es`;
+    const url = `${config.API_URL}?q=${location}&appid=${config.API_KEY}&units=metric&lang=es`;
 
     fetch(url)
         .then(response => {
@@ -46,7 +43,7 @@ function fetchWeather(location) {
             return response.json();
         })
         .then(data => {
-            // Actualiza el contenido del DOM con los datos obtenidos
+            // Actualizar el contenido del DOM con los datos obtenidos
             updateWeatherUI(data);
         })
         .catch(error => {
@@ -54,7 +51,7 @@ function fetchWeather(location) {
             locationElement.textContent = 'Ubicación no encontrada.';
             temperatureElement.textContent = '';
             descriptionElement.textContent = error.message;
-            iconElement.src = '';
+            iconElement.src = '100px.png';
             iconElement.alt = '';
             visibilityElement.textContent = '';
             windElement.textContent = '';
@@ -65,7 +62,7 @@ function fetchWeather(location) {
 
 // Obtener el clima basado en las coordenadas (latitud y longitud)
 function fetchWeatherByCoords(lat, lon) {
-    const url = `${apiUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric&lang=es`;
+    const url = `${config.API_URL}?lat=${lat}&lon=${lon}&appid=${config.API_KEY}&units=metric&lang=es`;
 
     fetch(url)
         .then(response => {
@@ -87,7 +84,7 @@ function fetchWeatherByCoords(lat, lon) {
             locationElement.textContent = 'Ubicación no encontrada.';
             temperatureElement.textContent = '';
             descriptionElement.textContent = error.message;
-            iconElement.src = '';
+            iconElement.src = '100px.png';
             iconElement.alt = '';
             visibilityElement.textContent = '';
             windElement.textContent = '';
@@ -98,7 +95,11 @@ function fetchWeatherByCoords(lat, lon) {
 
 // Función para actualizar la interfaz con los datos del clima
 function updateWeatherUI(data) {
-    locationElement.textContent = data.name;
+    const city = data.name;
+    const country = data.sys.country;
+
+    // Mostrar ciudad y país en el mismo elemento
+    locationElement.textContent = `${city}, ${country}`;
     temperatureElement.textContent = `${Math.round(data.main.temp)}°C`;
     descriptionElement.textContent = data.weather[0].description;
 
@@ -116,7 +117,7 @@ function updateWeatherUI(data) {
         rainElement.textContent = 'Lluvia: No se ha registrado lluvia en la última hora';
     }
 }
-    
+
 
 // Evento para el botón de búsqueda
 searchButton.addEventListener('click', () => {
