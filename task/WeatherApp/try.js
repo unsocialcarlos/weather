@@ -136,8 +136,44 @@ locationInput.addEventListener('keydown', (event) => {
         }
     }
 });
-
 // Llama a getUserLocation al cargar la página
 window.addEventListener('load', () => {
     getUserLocation();
 });
+
+
+// M A P A
+
+// Inicializa el mapa
+const map = L.map('map').setView([51.505, -0.09], 13); 
+
+// Agrega una capa de mapa base de OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Agrega un marcador en el centro del mapa
+const marker = L.marker([51.505, -0.09]).addTo(map)
+    .bindPopup('Estás en Londres!')
+    .openPopup();
+
+
+// Obtener la ubicación del usuario
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        // Centrar el mapa en la ubicación actual
+        map.setView([lat, lon], 13);
+
+        // Agregar un marcador en la ubicación actual
+        L.marker([lat, lon]).addTo(map)
+            .bindPopup('¡Estás aquí!')
+            .openPopup();
+    }, () => {
+        console.error('No se pudo obtener la ubicación.');
+    });
+} else {
+    console.error('La geolocalización no está soportada en este navegador.');
+}

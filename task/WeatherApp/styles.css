@@ -1,10 +1,10 @@
-/*@keyframes BgAnimation {
+@keyframes BgAnimation {
   0% {background-image:url('espacio.jpg');}
   30% {background-image:url('soleado.jpg');}
   60% {background-image:url('nubes.jpg');}
   100% {background-image:url('tormenta.jpg');}
 }
-*/
+
 body {
   
   font-family:Arial, Helvetica, sans-serif;
@@ -30,7 +30,8 @@ body {
   background-color: rgba(204, 197, 197, 0.8); /* Set the background color to be transparent */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9); /* Adjust the alpha value here for the box shadow transparency */
-  margin-top: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 h1 {
@@ -59,4 +60,10 @@ button {
   margin-top: 60px;
 }
 
+map{
+  display: flex;
+  width: 80px;
+  align-items: center;
+  text-align: center;
   
+}
