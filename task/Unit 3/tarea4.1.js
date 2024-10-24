@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
 */
 
 document.addEventListener('DOMContentLoaded', function () {
-    const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3MjkzNzQzMDMsIm5iZiI6MTcyOTM1MjYxMywicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.2644rIiygMpoEdTIry9dKATlkHWeMYHedfdY4DL-BjFqcBOwsNniq1r87E4NroF51nsfsn_Wjg6ELXExXEX36Q'
+    const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk4MDI5MTgsIm5iZiI6MTcyOTc4MTIyOCwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.7yFPfXhYVcCqKvDDR24-ho6vy-SO9_eV4qVpQa8TMN5cKY12azm4KbT9rRAU_aSVGT9Xa0cX61zeAWtqDoPv6A'
     // Función que hace la solicitud fetch
     async function tabla4() {
         try {
@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Iteramos sobre cada artículo para construir las filas de la tabla
             datos.forEach(articulo => {
-                const codar = articulo.codar || 'Sin código';
-                const nomcli = articulo.nomcli || 'Sin nombre';
-                tablaHTML += `<tr><td>${codar}</td><td>${nomcli}</td></tr>`;
-            });
+                        const code = articulo.codart || 'Sin código';
+                        const cli = articulo.nompro || 'Sin nombre';
+                        tablaHTML += `<tr><td>${code}</td><td>${cli}</td></tr>`;
+                    });
 
             tablaHTML += '</table>';  // Cerramos la tabla
 

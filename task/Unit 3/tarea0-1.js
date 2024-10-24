@@ -20,22 +20,14 @@ fetch('https://clouddemosjncv14.audidata.es:5555/api/login', {
         return response.json(); 
     })
     .then(data => {
-<<<<<<< HEAD
         console.log('Token obtenido:', data.token); 
-=======
-        console.log('Token obtenido:', data.token); // Maneja el token aquí
->>>>>>> b55d9e7335f3e2e2afb2503a60601feaed144d14
     })
     .catch(error => {
         console.error('There was a problem with the fetch operation:', error);
     });
 
 // TOKEN
-<<<<<<< HEAD
-const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk1MTYyNjIsIm5iZiI6MTcyOTQ5NDU3Miwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.vGx5LjJGxQeZvwGI-b3gOgqOaAyB8zQHGetWxBn7fb_rjtYcMeN6FEo-cty2BNvsxJZvToOelfHWCyJWJ7w9zw'
-=======
-const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk0NzA4NDksIm5iZiI6MTcyOTQ0OTE1OSwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.OXZ6YUw1oSu3JuTfJ0wwBhne--uZkWOHK3e2kp0B0B1M0WMxBLyDVK4IQx06doZKoM4k9jYYwXbRNPvC-lxPBA'
->>>>>>> b55d9e7335f3e2e2afb2503a60601feaed144d14
+const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk4MDI4OTQsIm5iZiI6MTcyOTc4MTIwNCwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.DUoQmmg4pxR5hEBi4LqBWY87ZVEQxAHZAs90niDMb6vjsu3xZqHOirBkLpmVi--9WqvjUO7q9dX0vLktODMVPQ'
 
 // T A R E A - 1
 
