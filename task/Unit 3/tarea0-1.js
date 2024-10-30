@@ -27,8 +27,8 @@ fetch('https://clouddemosjncv14.audidata.es:5555/api/login', {
     });
 
 // TOKEN
-const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk4MDI4OTQsIm5iZiI6MTcyOTc4MTIwNCwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.DUoQmmg4pxR5hEBi4LqBWY87ZVEQxAHZAs90niDMb6vjsu3xZqHOirBkLpmVi--9WqvjUO7q9dX0vLktODMVPQ'
-
+const token = 'eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJETVZDRnJhbWV3b3JrIEpXVCBBdXRob3JpdHkiLCJleHAiOjE3Mjk4OTA0MTYsIm5iZiI6MTcyOTg2ODcyNiwicm9sZXMiOiIiLCJUaXBvIjoiUEUiLCJDb2RpZ28iOiIgICAgICAgOSIsIkFsYXJtYSI6IiIsInVzZXJuYW1lIjoiam5jIn0.yWHU1y_BDSM5wBF-u_H2-PBSA19X4gMQwp6FV5mSNm5c8nkR7NQ2_RyZMunQPHR3-fJHXqma6dA0PdLtil9Zsw'
+const cred = base64Credentials;
 // T A R E A - 1
 
 // Función que hace la solicitud fetch
